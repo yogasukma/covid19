@@ -13,7 +13,7 @@ class DataViewer
             $date = date('Y-m-d');
         }
 
-        return Patient::whereDate('created_at', '=', $date)->first();
+        return Patient::orderBy('id', 'desc')->first();
     }
 
     public function getMetas($type)
