@@ -20,12 +20,10 @@
         </div>
     </div>
 
-    <div class="subscribe" style="display: none">
+    <div class="subscribe">
         <p>Dapatkan pembaharuan setiap ada perubahan data / jumlah pasien di inbox email anda</p>
-        <form method="post">
-            <input type="email" name="contact" required placeholder="Ketik email anda disini">
-            <input type="submit" value="subscribe">
-        </form>
+        <input type="email" name="contact" required placeholder="Ketik email anda disini">
+        <input type="submit" value="subscribe">
     </div>
 
     <div class="disclaimer">
@@ -36,4 +34,19 @@
             <li>Sebagian besar pasien tidak diketahui berada di provinsi ataupun cluster apa</li>
         </ul>
     </div>
+@endsection
+
+@section("js")
+<script>
+    $("input[type='submit']").on("click", function() {
+        $.post('subscribe', {"contact": $("input[type='email']").val()})
+            .fail(function(response) {
+                alert(response.responseJSON.contact[0]);
+                $("input[type='email']").focus();
+            })
+            .then(function(response) {
+                alert(response);
+            });
+    });
+</script>
 @endsection

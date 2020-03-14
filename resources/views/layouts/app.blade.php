@@ -21,5 +21,8 @@
     <footer>
         by <a href="http://yogasukma.web.id" target="_blank">Yoga Sukma</a>
     </footer>
+
+    <script src="jquery.js"></script>
+    @yield("js")
 </body>
 </html>
