@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Model
@@ -17,6 +18,7 @@ class Patient extends Model
 
     public function getLastUpdatedAttribute()
     {
-        return date('d/n/Y H:i', strtotime($this->updated_at));
+        // not sure yet, it seems lumen has some timezone issues?
+        return Carbon::createFromFormat('Y-m-d H:i:s', $this->getAttribute('updated_at'))->addHours(8)->format('d/n/Y H:i');
     }
 }
