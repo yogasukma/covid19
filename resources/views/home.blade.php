@@ -31,7 +31,7 @@
         <ul>
             <li>Terakhir diperbarui <strong>{{ $patient->last_updated }}</strong></li>
             <li>Data diambil dari kawalcovid19.id</li>
-            <li>Sebagian besar pasien tidak diketahui berada di provinsi ataupun cluster apa</li>
+            <li>kawalcovid19.id menggunakan data dari penginputan kontributor yang bisa jadi tidak menggambarkan kejadian real time sebenarnya</li>
         </ul>
     </div>
 @endsection

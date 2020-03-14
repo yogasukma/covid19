@@ -19,7 +19,8 @@
     </section>
 
     <footer>
-        by <a href="http://yogasukma.web.id" target="_blank">Yoga Sukma</a>
+        Just another project by <a href="http://yogasukma.web.id" target="_blank">Yoga Sukma</a> - 
+        (<a href="https://gitlab.com/yogasukma/covid19" target="_blank">source code</a>)
     </footer>
 
     <script src="jquery.js"></script>
