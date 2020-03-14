@@ -34,6 +34,7 @@ header{
 .stats{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 @media(max-width: 960px){
@@ -136,7 +137,7 @@ header{
     text-align: center;
     color: #fff;;
     border-radius: 4px;
-    margin: 30px auto 10px;
+    margin: 10px auto;
 }
 
 @media(max-width: 960px){

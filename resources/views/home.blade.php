@@ -20,55 +20,6 @@
         </div>
     </div>
 
-    <div class="tables">
-        <div>
-            <h3>Berdasarkan Provinsi</h3>
-            <table>
-                <tr>
-                    <th>Nama Provinsi</th>
-                    <th>Jumlah</th>
-                </tr>
-                @foreach($byProvince as $label => $qty)
-                <tr>
-                    <td>{{ ucwords($label) }}</td>
-                    <td>{{ $qty }}</td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
-        <div>
-            <h3>Berdasarkan Cluster</h3>
-            <table>
-                <tr>
-                    <th>Nama Cluster</th>
-                    <th>Jumlah</th>
-                </tr>
-                @foreach($byCluster as $label => $qty)
-                <tr>
-                    <td>{{ ucwords($label) }}</td>
-                    <td>{{ $qty }}</td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
-        <div>
-            <h3>Berdasarkan Gender</h3>
-            <table>
-                <tr>
-                    <th>Jenis Kelamin</th>
-                    <th>Jumlah</th>
-                </tr>
-
-                @foreach($byGender as $label => $qty)
-                <tr>
-                    <td>{{ ucwords($label) }}</td>
-                    <td>{{ $qty }}</td>
-                </tr>
-                @endforeach
-            </table>
-        </div>
-    </div>
-
     <div class="subscribe" style="display: none">
         <p>Dapatkan pembaharuan setiap ada perubahan data / jumlah pasien di inbox email anda</p>
         <form method="post">
