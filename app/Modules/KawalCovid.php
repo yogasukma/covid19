@@ -24,15 +24,6 @@ class KawalCovid
                     'sembuh' => $data['recovered']['value'],
                     'meninggal' => $data['deaths']['value'],
                 ],
-                'meta' => [
-                    'gender' => [
-                        'pria' => $data['gender']['p'],
-                        'wanita' => $data['gender']['l'],
-                        'tidak_teridentifikasi' => $data['gender']['?'],
-                    ],
-                    'province' => $data['province'],
-                    'cluster' => $data['cluster'],
-                ],
             ]);
         });
 

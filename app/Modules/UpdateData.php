@@ -10,7 +10,7 @@ class UpdateData
     public function save($data)
     {
         $this->updatePatient($data['patients']);
-        $this->updateMeta($data['meta']);
+        // $this->updateMeta($data['meta']);
     }
 
     public function updatePatient($patients)
