@@ -18,6 +18,6 @@ class DataViewer
 
     public function getMetas($type)
     {
-        return Meta::where('type', $type)->orderBy('label')->get()->pluck('qty', 'label');
+        return Meta::where('type', $type)->orderBy('qty', 'desc')->get()->pluck('qty', 'label');
     }
 }
