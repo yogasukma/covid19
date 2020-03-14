@@ -28,6 +28,6 @@ class Kernel extends ConsoleKernel
     {
         // pull data every hour
         $schedule->command('grab:kawalcovid')->hourly();
-        $schedule->command('notifications:send')->hourly();
+        $schedule->command('notifications:send')->everyFiveMinutes();
     }
 }
