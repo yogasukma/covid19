@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\GrabKawalCovid;
+use App\Console\Commands\SendNotifications;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
@@ -15,6 +16,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         GrabKawalCovid::class,
+        SendNotifications::class,
     ];
 
     /**
@@ -26,5 +28,6 @@ class Kernel extends ConsoleKernel
     {
         // pull data every hour
         $schedule->command('grab:kawalcovid')->hourly();
+        $schedule->command('notifications:send')->hourly();
     }
 }
