@@ -10,9 +10,6 @@ class PageController extends Controller
     {
         return view('home', [
             'patient' => (new DataViewer())->getPatients(),
-            'byGender' => (new DataViewer())->getMetas('gender'),
-            'byCluster' => (new DataViewer())->getMetas('cluster'),
-            'byProvince' => (new DataViewer())->getMetas('province'),
         ]);
     }
 }
