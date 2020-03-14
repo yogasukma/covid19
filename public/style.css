@@ -1,0 +1,199 @@
+body{
+    background-color: #eee;;
+    font-family: sans-serif;
+    margin: 50px auto;
+}
+
+header{
+    width: 40%;
+    margin: 50px auto 30px;
+    text-align: center;
+}
+
+@media(max-width: 960px){
+    header{
+        width: 90%;
+    }
+}
+
+#content{
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+@media(max-width: 960px){
+    #content{
+        width: 80%;
+    }
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 960px){
+    .stats{
+        flex-direction: column;
+    }
+}
+
+.stats div.case{
+    text-align: center;
+    padding: 30px;
+    width: 25%;
+    margin: 5px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+@media(max-width: 960px){
+    .stats div.case{
+        width: 100%;
+        padding: 20px 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.stats div.--terkonfirmasi{
+    background-color: #f6b93b;
+}
+
+.stats div.--perawatan{
+    background-color: #6a89cc;
+}
+
+.stats div.--sembuh{
+    background-color: #78e08f;
+}
+
+.stats div.--meninggal{
+    background-color: #b71540;
+}
+
+.stats div.case h2{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.tables{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 960px){
+    .tables{
+        flex-direction: column;
+    }
+}
+
+.tables div{
+    width: 30%;
+    margin: 10px;
+}
+
+@media(max-width: 960px){
+    .tables div{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.tables div h3{
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+.tables table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tables table th,
+.tables table td{
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: left;
+}
+
+.tables th:last-child,
+.tables td:last-child{
+    text-align: center;
+}
+
+.subscribe{
+    background-color: #333;
+    padding: 50px;
+    text-align: center;
+    color: #fff;;
+    border-radius: 4px;
+    margin: 30px auto 10px;
+}
+
+@media(max-width: 960px){
+    .subscribe{
+        padding: 20px;
+    }
+}
+
+.subscribe input[type='text'] ,
+.subscribe input[type='email'] {
+    width: 50%;
+    padding: 10px;
+    border-radius: 4px;;
+    border: none;
+}
+
+@media(max-width: 960px){
+    .subscribe input[type='text'] ,
+    .subscribe input[type='email'] {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.subscribe input[type='submit']{
+    border: none;
+    background-color: #f6b93b;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+@media(max-width: 960px){
+    .subscribe input[type='submit']{
+        display: block;
+        width: 70%;
+        margin: auto;
+        margin-top: 5px;
+    }
+}
+
+.disclaimer{
+    background: #eee;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.disclaimer ul{
+    padding-left: 10px;
+}
+
+.disclaimer ul li{
+    padding: 5px 0;
+}
+
+footer{
+    margin: 50px auto;
+    text-align: center;
+}
