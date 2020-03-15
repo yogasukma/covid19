@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:url"                content="https://covid.fullstack.id" />
-    <meta property="og:type"               content="article" />
-    <meta property="og:title"              content="Waspada Covid-19!" />
-    <meta property="og:description"        content="Monitoring jumlah kasus Covid-19 terbaru" />
-    <meta property="og:image"              content="preview.png" />
+    <meta property="og:url" content="https://covid.fullstack.id" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Waspada Covid-19!" />
+    <meta property="og:description" content="Monitoring jumlah kasus Covid-19 terbaru" />
+    <meta property="og:image" content="preview.png" />
+    <meta name="twitter:title" content="Waspada Covid-19!">
+    <meta name="twitter:description" content="Monitoring jumlah kasus Covid-19 terbaru">
+    <meta name="twitter:image" content="preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+
     <title>Waspada Covid-19</title>
     <link rel="stylesheet" href="style.css">
 </head>
