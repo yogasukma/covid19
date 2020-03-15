@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use Carbon\Carbon;
 use App\Models\Notification;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -29,7 +30,7 @@ class UpdateCovid extends Mailable
     public function build()
     {
         return $this
-            ->subject('Update Covid '.date('d/n/Y H:i'))
+            ->subject('Update Covid '.Carbon::now()->addHours(8)->format('d/n/Y H:i'))
             ->view('notifications.email.update')
             ->with(['notification' => $this->notification]);
     }
