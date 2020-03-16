@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Console\Commands\GrabNews;
 use App\Console\Commands\GrabKawalCovid;
 use App\Console\Commands\SendNotifications;
 use Illuminate\Console\Scheduling\Schedule;
@@ -16,6 +17,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         GrabKawalCovid::class,
+        GrabNews::class,
         SendNotifications::class,
     ];
 
