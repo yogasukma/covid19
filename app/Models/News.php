@@ -21,7 +21,7 @@ class News extends Model
     
     public function getDateAttribute()
     {
-        return $this->getAttribute("created_at")->format("H:i d/n/Y");
+        return $this->getAttribute("created_at")->addHours(8)->format("H:i d/n/Y");
     }
 }
 
