@@ -131,6 +131,13 @@ header{
 
 .news .items ul li{
     margin-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+
+.news .items ul li:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .news .items ul li span{
