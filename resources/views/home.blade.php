@@ -20,6 +20,11 @@
         </div>
     </div>
 
+
+    <div class="kemkes">
+        Info Kementrian Kesehatan &raquo; <a href="{{ $kemkes->link . "?src=covid.fullstac.id" }}" target="_blank">{{ $kemkes->title }}</a>
+    </div>
+
     <div class="subscribe">
         <p>Dapatkan pembaharuan setiap ada perubahan data / jumlah pasien di inbox email anda</p>
         <input type="email" name="contact" required placeholder="Ketik email anda disini">
@@ -33,6 +38,7 @@
                 <div class="items">
                     <h4>{{ $regional }}</h4>
                     <ul>
+                        {{-- @TODO: need better way to limit news --}}
                         @foreach(collect($items)->take(5) as $item)
                             <li>
                                 <span>{{ $item->source }} &bull; {{ $item->date }}</span>

@@ -16,4 +16,11 @@ class NewsRepository
             return [$item["regional"] => $item];
         });
     }
+
+    public function getKemkesNews()
+    {
+        return News::where("source", "kemkes")
+            ->orderBy('created_at', 'desc')
+            ->first();
+    }
 }

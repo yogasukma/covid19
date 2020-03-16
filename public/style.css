@@ -83,6 +83,14 @@ header{
     margin: 0;
 }
 
+.kemkes{
+    background: #78e08f;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+
 .news-wrapper {
     margin: 60px auto;
 }

@@ -11,7 +11,8 @@ class PageController extends Controller
     {
         return view('home', [
             'patient' => (new DataViewer())->getPatients(),
-            'news' => (new NewsRepository())->get()
+            'news' => (new NewsRepository())->get(),
+            'kemkes' => (new NewsRepository())->getKemkesNews()
         ]);
     }
 }
