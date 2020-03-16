@@ -21,7 +21,6 @@
     <header>
         <h1>Waspada Covid-19</h1>
         <p>Monitoring jumlah korban Covid-19 di Indonesia</p>
-        <p>Sumber data: <a href="https://kawalcovid19.id" target="_blank">kawalcovid19.id</a></p>
     </header>
 
     <section id="content">
