@@ -8,7 +8,11 @@ class NewsRepository
 {
     public function get()
     {
-        return News::whereNotNull("regional")->orderBy("regional")->get()->mapToGroups(function($item, $key){
+        return News::whereNotNull("regional")
+            ->orderBy("regional")
+            ->orderBy('created_at', 'desc')
+            ->get()
+            ->mapToGroups(function($item, $key){
             return [$item["regional"] => $item];
         });
     }
