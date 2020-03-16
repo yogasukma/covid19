@@ -29,7 +29,10 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // pull data every hour
-        $schedule->command('grab:kawalcovid')->everyFifteenMinutes();
-        $schedule->command('notifications:send')->everyFiveMinutes();
+        // disabled for news branch
+        // $schedule->command('grab:kawalcovid')->everyFifteenMinutes();
+        // $schedule->command('notifications:send')->everyFiveMinutes();
+
+        $schedule->command('grab:news')->everyTenMinutes();
     }
 }
