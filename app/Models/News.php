@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class News extends Model
@@ -21,7 +22,11 @@ class News extends Model
     
     public function getDateAttribute()
     {
-        return $this->getAttribute("created_at")->addHours(8)->format("H:i d/n/Y");
+         $date = !is_null($this->getAttribute("published_at"))
+            ? Carbon::createFromFormat("Y-m-d H:i:s", $this->getAttribute("published_at"))
+            : $this->getAttribute("created_at");
+
+        return $date->addHours(8)->format("H:i d/n/Y");
     }
 }
 
