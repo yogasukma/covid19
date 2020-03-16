@@ -55,16 +55,10 @@ class NewsSeeker
 
     public function getRegionalArea($title)
     {
-        $words = explode(" ", $title);
-
-        foreach ($words as $word) {
-            $word = strtoupper($word);
-
-            // @TODO Need better way to mapping news here..
-            foreach (config("regional") as $key => $regional) {
-                if (strpos(strtoupper(" " . $title . " ")," ". $key . " ") !== false) {
-                    return $regional;
-                }
+        // @TODO Need better way to mapping news here..
+        foreach (config("regional") as $key => $regional) {
+            if (strpos(strtoupper(" " . $title . " ")," ". $key . " ") !== false) {
+                return $regional;
             }
         }
 
