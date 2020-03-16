@@ -17,7 +17,6 @@ class UpdateData
 
         if (!empty($this->diff)) {
             (new SendNotifications())->queue($this->diff);
-            dd($this->diff);
         }
     }
 

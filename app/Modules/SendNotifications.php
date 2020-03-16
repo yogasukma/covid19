@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 
 class SendNotifications
 {
-    public function queue($data)
+    public function queue($data, $format = "stats")
     {
         $subscribers = (new SubscriberRepository())->get();
 
@@ -16,6 +16,7 @@ class SendNotifications
             Notification::create([
                 'recipient' => $subscriber->contact,
                 'type' => $subscriber->type,
+                'format' => $format,
                 'data' => json_encode($data),
                 'status' => 'waiting',
             ]);
@@ -32,6 +33,8 @@ class SendNotifications
 
         foreach ($notifications as $notification) {
             Notification::where("id", $notification->id)->update(['status' => 'onprogress']);
+
+            $sent = false;
 
             if ($notification->type == 'email') {
                 $sent = $this->sendEmail($notification);

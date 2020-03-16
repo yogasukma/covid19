@@ -4,6 +4,7 @@ namespace App\Modules;
 
 use SimplePie;
 use App\Models\News;
+use App\Modules\SendNotifications;
 use Illuminate\Support\Facades\Log;
 
 class NewsSeeker
@@ -25,18 +26,19 @@ class NewsSeeker
 
                     Log::info("[" . $source . "] " . $item->get_title());
 
-                    // @TODO: need better saving method to save database queries
-                    News::updateOrCreate([
-                        "source" => $source,
-                        "guid" => $item->get_id()
-                    ], [
+                    $data = [
                         "title"           => $item->get_title(),
                         "link"            => $item->get_link(),
                         "thumbnail"       => $item->get_enclosure()->get_link(),
                         "description"     => strip_tags($item->get_description()),
                         "published_at"    => $item->get_date("Y-m-d H:i:s"),
                         "regional"        => $this->getRegionalArea($item->get_title())
-                    ]);
+                    ];
+
+                    // @TODO: need better saving method to save database queries
+                    News::updateOrCreate([
+                        "source" => $source, "guid" => $item->get_id()
+                    ], $data);
 
                 }
             }
