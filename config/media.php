@@ -36,4 +36,10 @@
             'rss_url' => 'https://rss.tempo.co/nasional',
             'icon' => 'https://statik.tempo.co/favicon/tempo-white.ico',
         ],
+
+        'jpnn' => [
+            'site_url' => 'https://www.jpnn.com/',
+            'rss_url' => 'https://www.jpnn.com/rss',
+            'icon' => 'https://www.jpnn.com/assets/icons/logo_57.png',
+        ],
     ];
