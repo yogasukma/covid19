@@ -10,7 +10,7 @@ class NewsRepository
     {
         return News::whereNotNull("regional")
             ->orderBy("regional")
-            ->orderBy('created_at', 'desc')
+            ->orderBy("published_at", 'desc')
             ->get()
             ->mapToGroups(function($item, $key){
             return [$item["regional"] => $item];
