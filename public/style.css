@@ -1,7 +1,8 @@
 body{
-    background-color: #eee;;
+    background-color: #F1F1FF;
     font-family: sans-serif;
     margin: 50px auto;
+    color: #333;
 }
 
 header{
@@ -80,6 +81,60 @@ header{
 .stats div.case h2{
     font-size: 4rem;
     margin: 0;
+}
+
+.news-wrapper {
+    margin: 60px auto;
+}
+
+.news-wrapper h3{
+    text-align: center;
+}
+.news .items{
+    width: 32%;;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;;
+}
+
+@media(max-width: 960px){
+    .news .items{
+        width: 100%;
+    }
+}
+
+.news .items h4{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 0;
+}
+
+.news .items ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding: 0 10px;
+}
+
+.news .items ul li{
+    margin-bottom: 15px;
+}
+
+.news .items ul li span{
+    display: block;
+    color: #aaa;
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-bottom: 3px;;
+}
+
+.news .items ul a{
+    color: #333;
+    text-decoration: none;
+}
+
+.news .items ul a:hover{
+    text-decoration: underline;
 }
 
 .tables{

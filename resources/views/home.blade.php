@@ -26,6 +26,25 @@
         <input type="submit" value="subscribe">
     </div>
 
+    <div class="news-wrapper">
+        <h3>Berita terbaru dari daerah terkait Covid-19 (corona)</h3>
+        <div class="news">
+            @foreach($news as $regional => $items)
+                <div class="items">
+                    <h4>{{ $regional }}</h4>
+                    <ul>
+                        @foreach(collect($items)->take(5) as $item)
+                            <li>
+                                <span>{{ $item->source }}</span>
+                                <a target="_blank" href="{{ $item->link . "?src=covid.fullstack.id" }}"> {{ $item->title }} </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
     <div class="disclaimer">
         <strong>Catatan</strong>
         <ul>
@@ -49,5 +68,13 @@
                 alert(response);
             });
     });
+
+    if ($(window).width() > 960) {
+        $('.news').masonry({
+            // options
+            itemSelector: '.items',
+            gutter: 15
+        });
+    }
 </script>
 @endsection

@@ -34,6 +34,7 @@
     </footer>
 
     <script src="jquery.js"></script>
+    <script src="masonry.js"></script>
     @yield("js")
 </body>
 </html>

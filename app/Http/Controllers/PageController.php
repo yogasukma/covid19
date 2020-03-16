@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Modules\DataViewer;
+use App\Modules\NewsRepository;
 
 class PageController extends Controller
 {
@@ -10,6 +11,7 @@ class PageController extends Controller
     {
         return view('home', [
             'patient' => (new DataViewer())->getPatients(),
+            'news' => (new NewsRepository())->get()
         ]);
     }
 }
