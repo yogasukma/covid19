@@ -33,7 +33,8 @@ class NewsSeeker
                         "link"            => $item->get_link(),
                         "thumbnail"       => $item->get_enclosure()->get_link(),
                         "description"     => strip_tags($item->get_description()),
-                        "published_at"    => $item->get_date("Y-m-d H:i:s")
+                        "published_at"    => $item->get_date("Y-m-d H:i:s"),
+                        "regional"        => $this->getRegionalArea($item->get_title())
                     ]);
 
                 }
@@ -50,5 +51,23 @@ class NewsSeeker
         $feed->init();
 
         return $feed;
+    }
+
+    public function getRegionalArea($title)
+    {
+        $words = explode(" ", $title);
+
+        foreach ($words as $word) {
+            $word = strtoupper($word);
+
+            // @TODO Need better way to mapping news here..
+            foreach (config("regional") as $key => $regional) {
+                if (strpos(strtoupper(" " . $title . " ")," ". $key . " ") !== false) {
+                    return $regional;
+                }
+            }
+        }
+
+        return null;
     }
 }

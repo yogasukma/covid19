@@ -107,6 +107,7 @@ $app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
 $app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
 
 $app->configure('media');
+$app->configure('regional');
 
 /*
 |--------------------------------------------------------------------------

@@ -4,6 +4,7 @@ namespace App\Console;
 
 use App\Console\Commands\GrabNews;
 use App\Console\Commands\GrabKawalCovid;
+use App\Console\Commands\UpdateNewsRegion;
 use App\Console\Commands\SendNotifications;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -19,6 +20,7 @@ class Kernel extends ConsoleKernel
         GrabKawalCovid::class,
         GrabNews::class,
         SendNotifications::class,
+        UpdateNewsRegion::class,
     ];
 
     /**
