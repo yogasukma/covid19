@@ -18,5 +18,10 @@ class News extends Model
         "published_at",
         "regional"
     ];
+    
+    public function getDateAttribute()
+    {
+        return $this->getAttribute("created_at")->format("H:i d/n/Y");
+    }
 }
 

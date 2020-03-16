@@ -35,7 +35,7 @@
                     <ul>
                         @foreach(collect($items)->take(5) as $item)
                             <li>
-                                <span>{{ $item->source }}</span>
+                                <span>{{ $item->source }} &bull; {{ $item->date }}</span>
                                 <a target="_blank" href="{{ $item->link . "?src=covid.fullstack.id" }}"> {{ $item->title }} </a>
                             </li>
                         @endforeach
