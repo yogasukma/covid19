@@ -1,6 +1,12 @@
 <?php
 
     return [
+        'kemkes' => [
+            'site_url' => 'https://covid19.kemkes.go.id/',
+            'rss_url' => 'https://covid19.kemkes.go.id/feed/',
+            'icon' => null,
+        ],
+
         'detik' => [
             'site_url' => 'https://www.detik.com/',
             'rss_url' => 'http://rss.detik.com/index.php/detikcom_nasional',
@@ -41,5 +47,11 @@
             'site_url' => 'https://www.jpnn.com/',
             'rss_url' => 'https://www.jpnn.com/rss',
             'icon' => 'https://www.jpnn.com/assets/icons/logo_57.png',
+        ],
+
+        'prokal.co' => [
+            'site_url' => 'https://kaltim.prokal.co/',
+            'rss_url' => 'https://kaltim.prokal.co/rss',
+            'icon' => 'https://kaltim.prokal.co/favicon.ico',
         ],
     ];
