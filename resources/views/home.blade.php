@@ -49,7 +49,8 @@
         <strong>Catatan</strong>
         <ul>
             <li>Terakhir diperbarui <strong>{{ $patient->last_updated }}</strong></li>
-            <li>Data diambil dari kawalcovid19.id</li>
+            <li>Data jumlah kasus diambil dari kawalcovid19.id</li>
+            <li>Berita dan informasi diambil dari media terkait</li>
             <li>kawalcovid19.id menggunakan data dari penginputan kontributor yang bisa jadi tidak menggambarkan kejadian real time sebenarnya</li>
             <li>Data lebih lengkap bisa dilihat disini <a href="https://kcov.id/daftarpositif" target="_blank">https://kcov.id/daftarpositif</a>
         </ul>
