@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Log;
 
 class NewsSeeker
 {
-    protected $focusKeyword = "corona";
-
     public function get()
     {
         foreach(config("media") as $source => $media) {
@@ -20,7 +18,10 @@ class NewsSeeker
             }
 
             foreach ($feed->get_items() as $item) {
-                if (strpos(strtolower($item->get_title()), $this->focusKeyword) !== false) {
+                if (
+                    strpos(strtolower($item->get_description()), "corona") !== false 
+                    || strpos(strtolower($item->get_description()), "covid") !== false
+                ) {
 
                     Log::info("[" . $source . "] " . $item->get_title());
 
