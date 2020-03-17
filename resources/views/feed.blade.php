@@ -15,7 +15,7 @@
                 <link>{{ $item->link }}</link>
                 <guid>{{ $item->guid }}</guid>
                 <pubDate>{{ $item->published_at_feeds_format }}</pubDate>
-                <description>{{ $item->description }}</description>
+                <description><![CDATA[{{ $item->description }} <a href='{{ $item->link . "?source=covid.fullstack.id" }}'>Selengkapnya</a>]]></description>
                 @if(!is_null($item->thumbnail))
                     <enclosure url="{{ $item->thumbnail }}" type="image/jpeg" />
                 @endif
