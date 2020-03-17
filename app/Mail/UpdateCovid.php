@@ -32,6 +32,6 @@ class UpdateCovid extends Mailable
         return $this
             ->subject('Update Covid '.Carbon::now()->addHours(8)->format('d/n/Y H:i'))
             ->view('notifications.email.' . $this->notification->format)
-            ->with(['notification' => $this->notification]);
+            ->with(['data' => json_decode($this->notification->data)]);
     }
 }

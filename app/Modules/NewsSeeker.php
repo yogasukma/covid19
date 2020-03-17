@@ -35,6 +35,10 @@ class NewsSeeker
                         "regional"        => $this->getRegionalArea($item->get_title())
                     ];
 
+                    if ($source == "kemkes") {
+                        (new SendNotifications())->newsFromKemkes($data);
+                    }
+
                     // @TODO: need better saving method to save database queries
                     News::updateOrCreate([
                         "source" => $source, "guid" => $item->get_id()

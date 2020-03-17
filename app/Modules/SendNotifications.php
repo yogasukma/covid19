@@ -2,6 +2,7 @@
 
 namespace App\Modules;
 
+use App\Models\News;
 use App\Mail\UpdateCovid;
 use App\Models\Notification;
 use Illuminate\Support\Facades\Mail;
@@ -53,5 +54,18 @@ class SendNotifications
         Mail::to($notification->recipient)->send(new UpdateCovid($notification));
 
         return true;
+    }
+
+    /**
+     * Check if news has been saved before or not.
+     * if not, then send it trough notification
+     */
+    public function newsFromKemkes($data)
+    {
+        $news = News::where("source", "kemkes")->where("link", $data["link"])->first();
+
+        if (empty($news)) {
+            $this->queue($data, "kemkes");
+        }
     }
 }
