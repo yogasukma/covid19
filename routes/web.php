@@ -12,4 +12,5 @@
 */
 
 $router->post('subscribe', 'SubscribeController@store');
+$router->get('feed', 'PageController@feed');
 $router->get('/', 'PageController@home');

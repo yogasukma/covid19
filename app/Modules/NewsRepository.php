@@ -23,4 +23,9 @@ class NewsRepository
             ->orderBy('created_at', 'desc')
             ->first();
     }
+
+    public function getFeeds()
+    {
+        return News::whereNotNull("regional")->orderBy("published_at", "desc")->take(10)->get();
+    }
 }

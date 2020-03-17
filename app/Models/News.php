@@ -28,5 +28,14 @@ class News extends Model
 
         return $date->addHours(8)->format("H:i d/n/Y");
     }
+
+    public function getPublishedAtFeedsFormatAttribute()
+    {
+         $date = !is_null($this->getAttribute("published_at"))
+            ? Carbon::createFromFormat("Y-m-d H:i:s", $this->getAttribute("published_at"))
+            : $this->getAttribute("created_at");
+
+        return $date->addHours(8)->format("D, d M Y H:i:s T");
+    }
 }
 

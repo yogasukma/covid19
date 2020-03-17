@@ -15,4 +15,13 @@ class PageController extends Controller
             'kemkes' => (new NewsRepository())->getKemkesNews()
         ]);
     }
+
+    public function feed()
+    {
+        return response(
+            view("feed", [
+                "news" => (new NewsRepository())->getFeeds()
+            ])
+        )->header("Content-Type", "text/xml");
+    }
 }
