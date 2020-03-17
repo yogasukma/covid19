@@ -13,6 +13,7 @@
     <meta name="twitter:description" content="Monitoring jumlah kasus Covid-19 terbaru">
     <meta name="twitter:image" content="preview.png">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="alternate" type="application/rss+xml" title="waspada covid-19 rss" href="/feed" />
 
     <title>Waspada Covid-19</title>
     <link rel="stylesheet" href="style.css">

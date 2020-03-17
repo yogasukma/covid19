@@ -29,6 +29,11 @@
         <p>Dapatkan pembaharuan setiap ada perubahan data / jumlah pasien di inbox email anda</p>
         <input type="email" name="contact" required placeholder="Ketik email anda disini">
         <input type="submit" value="subscribe">
+
+        <p>
+
+            Kamu juga bisa akses update berita terbaru via RSS &raquo; <a href="/feed" style="color: yellow">Link RSS</a> 
+        </p>
     </div>
 
     <div class="news-wrapper">
