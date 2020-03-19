@@ -574,7 +574,7 @@
 
         // sudah bukan regional lagi tentunya, nama-nama tokoh terkait daerah
         "ANIES" => "DKI JAKARTA",
-        "RISWAN KAMIL" => "JAWA BARAT",
+        "RIDWAN KAMIL" => "JAWA BARAT",
         "SULTAN HB" => "YOGYAKARTA",
         "GANJAR" => "JAWA TENGAH",
     ];
