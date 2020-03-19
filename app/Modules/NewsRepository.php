@@ -2,6 +2,7 @@
 
 namespace App\Modules;
 
+use Carbon\Carbon;
 use App\Models\News;
 use Illuminate\Support\Facades\Cache;
 
@@ -11,6 +12,7 @@ class NewsRepository
     {
         return Cache::remember("news", 600, function() {
             return News::whereNotNull("regional")
+                ->where('created_at', '>=', Carbon::now()->subDays(2)->toDateTimeString())
                 ->orderBy("regional")
                 ->orderBy("published_at", 'desc')
                 ->get()
