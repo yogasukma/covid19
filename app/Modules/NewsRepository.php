@@ -3,17 +3,20 @@
 namespace App\Modules;
 
 use App\Models\News;
+use Illuminate\Support\Facades\Cache;
 
 class NewsRepository
 {
     public function get()
     {
-        return News::whereNotNull("regional")
-            ->orderBy("regional")
-            ->orderBy("published_at", 'desc')
-            ->get()
-            ->mapToGroups(function($item, $key){
-            return [$item["regional"] => $item];
+        return Cache::remember("news", 600, function() {
+            return News::whereNotNull("regional")
+                ->orderBy("regional")
+                ->orderBy("published_at", 'desc')
+                ->get()
+                ->mapToGroups(function($item, $key){
+                    return [$item["regional"] => $item];
+                });
         });
     }
 
